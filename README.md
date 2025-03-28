@@ -16,11 +16,11 @@
 ---
 
 ### 🚀 **Projects**
-📌 **[Gym Management System (C, File Handling)](https://github.com/yourusername/gym-management-system)**  
+📌 **[Gym Management System (C, File Handling)](https://github.com/AbdelazizBarhoumi/Gym-Management-System)**  
 - Developed in **C** with `.dat` file-based storage  
 - Includes **member registration, trainer management, and payments**  
 
-📌 **[Smart Trash Can (IoT, ESP32, MQTT)](https://github.com/yourusername/smart-trash-can)**  
+📌 **[Smart Trash Can (IoT, ESP32, MQTT)](https://github.com/AbdelazizBarhoumi/Networked-Smart-Trash-Cans)**  
 - Built using **ESP32, Ultrasonic Sensors, and MQTT**  
 - Real-time waste level monitoring and mobile app integration  
 
