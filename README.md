@@ -41,4 +41,4 @@
 ### 📫 **Let's Connect!**
 📧 **Email:** [abdulazeezbrhomi@gmail.com](mailto:abdulazeezbrhomi@gmail.com)  
 🔗 **LinkedIn:** [linkedin.com/in/abdelzizbarhoumi](https://linkedin.com/in/abdelzizbarhoumi)  
-🔗 **GitHub:** [github.com/AzizBarhoumi](https://abdelazizbarhoumi.github.io/AbdelazizBarhoumi/)  
+🔗 **GitHub:** [github.com/AbdelazizBarhoumi](https://abdelazizbarhoumi.github.io/AbdelazizBarhoumi/)  
