@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <h1 align="center">Hi 👋, I'm Abdelaziz Barhoumi</h1>
 <h3 align="center">Software Engineer | AI Enthusiast | IoT Developer</h3>
 
