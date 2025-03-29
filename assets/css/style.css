@@ -48,10 +48,11 @@
     hsl(0, 0%, 25%) 0%, 
     hsla(0, 0%, 25%, 0) 50%
   );
-  --text-gradient-yellow: linear-gradient(
+  --text-gradient-blue: linear-gradient(
     to right, 
-    rgb(0, 191, 255), 
-    rgb(32, 32, 144)
+    rgb(32, 32, 144),
+    rgb(0, 191, 255) 
+    
   );
 
   /* solid */
@@ -251,7 +252,7 @@ article.active {
   left: 0;
   width: 30px;
   height: 3px;
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-blue);
   border-radius: 3px;
 }
 
@@ -818,7 +819,7 @@ main {
   left: -33px;
   height: 6px;
   width: 6px;
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-blue);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
@@ -862,7 +863,7 @@ main {
 }
 
 .skill-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-blue);
   height: 100%;
   border-radius: inherit;
 }
@@ -1879,4 +1880,19 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+.libutton {
+  display: block; /* Ensure it behaves like a block element */
+  margin: 0 auto; /* Center the button horizontally */
+  text-align: center;
+  padding: 10px 20px; /* Adjust padding for proper vertical alignment */
+  outline: none;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  width: 200px;
+  border-radius: 16px;
+  background-color: #0A66C2;
+  font-family: "SF Pro Text", Helvetica, sans-serif;
+  font-size: 16px; /* Adjust font size if needed */
+  line-height: 1.5; /* Ensure proper vertical alignment */
 }
