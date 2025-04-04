@@ -10,9 +10,33 @@ const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+const sidebarInfoMore = document.querySelector('.sidebar-info_more');
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+sidebarBtn.addEventListener("click", function () { 
+  elementToggleFunc(sidebar); 
+  sidebarInfoMore.classList.toggle('expanded');
+
+  // Toggle full name visibility based on sidebar state
+  const fullName = document.querySelector('.full-name');
+  const firstName = document.querySelector('.first-name');
+  if (fullName && firstName) {
+    if (sidebar.classList.contains('active')) {
+      fullName.style.display = 'inline';
+      firstName.style.display = 'none';
+    } else {
+      // Hide the full name only if the screen width is less than 450px
+      if (window.innerWidth < 450) {
+        fullName.style.display = 'none';
+        firstName.style.display = 'inline';
+      } else {
+        fullName.style.display = 'inline';
+        firstName.style.display = 'none';
+      }
+    }
+  }
+});
+
 
 
 
@@ -217,4 +241,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectId = projectMatch[0]; // e.g., "project-2"
     window.location.href = `./projects/${projectId}`;
   }
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleNameBtn = document.querySelector('.toggle-name-btn');
+  const firstName = document.querySelector('.first-name');
+  const fullName = document.querySelector('.full-name');
+
+  toggleNameBtn.addEventListener('click', function () {
+    if (fullName.style.display === 'none') {
+      fullName.style.display = 'inline';
+      firstName.style.display = 'none';
+      toggleNameBtn.textContent = 'Show First Name';
+    } else {
+      fullName.style.display = 'none';
+      firstName.style.display = 'inline';
+      toggleNameBtn.textContent = 'Show Full Name';
+    }
+  });
 });

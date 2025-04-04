@@ -1,45 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 - Portfolio</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Task Tracker App - [Your Name]</title>
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- AOS Library for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Back Button */
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 0.8rem 2rem;
+            background-color: #00d4ff;
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #00b8e6;
+            transform: translateY(-3px);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #00d4ff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #00d4ff;
+            transition: transform 0.3s ease;
+        }
+
+        .hero img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Video Demo Section */
+        .video-demo {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .video-demo video {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 3px solid #00d4ff;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 3rem;
+            background-color: #2c2c2c;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #00d4ff;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            color: #d1d1d1;
+        }
+
+        /* Details Grid */
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .detail-item {
+            background-color: #3a3a3a;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .detail-item strong {
+            color: #00d4ff;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Features List */
+        .features-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .features-list li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+            font-size: 1.2rem;
+        }
+
+        /* Gallery for Additional Screenshots */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #00d4ff;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Links Section */
+        .links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: #00d4ff;
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #00b8e6;
+            transform: translateY(-3px);
+        }
+
+        /* Call to Action */
+        .cta {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #d1d1d1;
+            margin-top: 2rem;
+        }
+
+        .cta a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .cta a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero img, .video-demo video {
+                max-width: 90%;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            section p, .features-list li {
+                font-size: 1rem;
+            }
+
+            .links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <h1>Project 1: Finance</h1>
-    </header>
+    <div class="container">
+        <!-- Back to Portfolio Button -->
+        <a href="portfolio.html" class="back-btn" data-aos="fade-down">Back to Portfolio</a>
 
-    <main>
-        <section class="project-description">
-            <h2>Description</h2>
-            <p>This project is a finance management application that helps users track their expenses and income, providing insights into their financial habits.</p>
+        <!-- Hero Section -->
+        <div class="hero" data-aos="fade-up">
+            <h1>Task Tracker App</h1>
+            <!-- Replace this with your actual project screenshot -->
+            <img src="https://via.placeholder.com/1200x600.png?text=Task+Tracker+App+Screenshot" alt="Task Tracker App Screenshot">
+        </div>
+
+        <!-- Video Demo Section -->
+        <div class="video-demo" data-aos="fade-up">
+            <!-- Replace this with your actual video file or embed a YouTube link -->
+            <video controls>
+                <source src="https://via.placeholder.com/800x400.mp4?text=Task+Tracker+Video+Demo" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Overview Section -->
+        <section data-aos="fade-up">
+            <h2>Overview</h2>
+            <p>
+                Task Tracker App is a web application I developed to help teams manage tasks efficiently. Built with React and Firebase, it provides a user-friendly interface for creating, assigning, and tracking tasks in real-time. This project showcases my skills in front-end development and real-time database integration.
+            </p>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <strong>Technologies</strong>
+                    React, Firebase, CSS
+                </div>
+                <div class="detail-item">
+                    <strong>Duration</strong>
+                    3 weeks
+                </div>
+                <div class="detail-item">
+                    <strong>Role</strong>
+                    Solo Project
+                </div>
+                <div class="detail-item">
+                    <strong>Status</strong>
+                    Live Demo Available
+                </div>
+            </div>
         </section>
 
-        <section class="technologies-used">
-            <h2>Technologies Used</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Node.js</li>
-                <li>MongoDB</li>
+        <!-- Features Section with Gallery -->
+        <section data-aos="fade-up">
+            <h2>Key Features</h2>
+            <ul class="features-list">
+                <li>Real-time task updates using Firebase for seamless collaboration.</li>
+                <li>Interactive drag-and-drop interface for task prioritization.</li>
+                <li>Customizable task categories and deadlines.</li>
+                <li>User authentication to ensure secure access.</li>
             </ul>
+            <!-- Gallery of Additional Screenshots -->
+            <div class="gallery">
+                <!-- Replace these with actual screenshots of your project -->
+                <img src="https://via.placeholder.com/300x200.png?text=Feature+1:+Real-time+Updates" alt="Real-time Updates">
+                <img src="https://via.placeholder.com/300x200.png?text=Feature+2:+Drag-and-Drop" alt="Drag-and-Drop Interface">
+                <img src="https://via.placeholder.com/300x200.png?text=Feature+3:+Categories" alt="Customizable Categories">
+                <img src="https://via.placeholder.com/300x200.png?text=Feature+4:+Authentication" alt="User Authentication">
+            </div>
         </section>
 
-        <section class="links">
-            <h2>Links</h2>
-            <p><a href="https://live-demo-link.com" target="_blank">Live Demo</a></p>
-            <p><a href="https://github.com/username/project1" target="_blank">Source Code</a></p>
+        <!-- Challenges & Learnings Section -->
+        <section data-aos="fade-up">
+            <h2>Challenges & Learnings</h2>
+            <p>
+                One of the biggest challenges was ensuring real-time updates without overloading the database. I learned how to optimize Firebase queries and implement efficient state management with React to improve performance. This project also deepened my understanding of user experience design, as I iterated on the UI based on user feedback.
+            </p>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
-    </footer>
+        <!-- Links Section -->
+        <section data-aos="fade-up">
+            <h2>Explore the Project</h2>
+            <div class="links">
+                <!-- Replace these links with your actual GitHub and demo links -->
+                <a href="https://github.com/yourusername/task-tracker" target="_blank" class="btn">View on GitHub</a>
+                <a href="https://your-live-demo-link.com" target="_blank" class="btn">Live Demo</a>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="cta" data-aos="fade-up">
+            Interested in this project? <a href="mailto:yourname@domain.com">Let’s connect</a> to discuss how I can bring similar solutions to your team!
+        </div>
+    </div>
+
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true, // Animations happen only once on scroll
+        });
+    </script>
 </body>
-
 </html>
