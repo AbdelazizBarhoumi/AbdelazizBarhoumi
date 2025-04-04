@@ -212,7 +212,7 @@
 
         <section class="about-text">
           <p>
-            Hey, I’m Abdelaziz! I’m a second-year software engineering student who’s all about building cool tech solutions. I started out studying Mechanical Engineering, but I switched gears because coding and problem-solving really light me up. I’ve got a knack for managing things too—I’ve led teams, organized big events, and even built systems to keep everything running smoothly.
+            Hey, I’m Abdelaziz! I’m a second-year software engineering student who’s all about building cool tech projects. I started out studying Mechanical Engineering, but I switched gears because coding and problem-solving really light me up. I’ve got a knack for managing things too—I’ve led teams, organized big events, and even built systems to keep everything running smoothly.
           </p>
           <p>
             Whether it’s writing code or coordinating people, I love tackling challenges and making stuff work better. Right now, I’m diving deep into software engineering, acing my classes, and picking up skills from Coursera and Tryhackme along the way.
@@ -322,7 +322,7 @@
                     <h4 class="h4 service-item-title">Excel Management</h4>
             
                     <p class="service-item-text">
-                      Creating advanced Excel-based systems with VBA for invoice management, financial planning, and data organization.
+                      Creating advanced Excel-based systems with VBA for management, financial planning, and data organization.
                     </p>
                   </div>
             
@@ -1192,24 +1192,18 @@
         </section>
 
         <section class="contact-form">
-
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
-
+          <form id="contact-form" class="form" data-form>
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="text" name="fullname" id="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" id="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <textarea name="message" id="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" id="button" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
+              <span id="button-text">Send Message</span>
             </button>
-
           </form>
 
         </section>
@@ -1229,11 +1223,44 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  // Initialize EmailJS with your user ID
+  emailjs.init('vEAle93fnKRlsHfAX');
+
+  const btn = document.getElementById('button');
+  const btnText = document.getElementById('button-text');
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Update button text while sending
+    btnText.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const serviceID = 'service_z4tz448'; // Your EmailJS service ID
+    const templateID = 'template_xxgfs1b'; // Your EmailJS template ID
+
+    // Send the form data using EmailJS
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btnText.textContent = 'Send Message';
+        btn.disabled = false;
+        alert('Your message has been sent successfully!');
+        this.reset(); // Clear the form
+      }, (err) => {
+        btnText.textContent = 'Send Message';
+        btn.disabled = false;
+        alert('Failed to send your message. Please try again.');
+        console.error('Error:', err);
+      });
+  });
+</script>
 
   <!--
     - ionicon link
   -->
-  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
