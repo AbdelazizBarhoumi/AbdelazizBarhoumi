@@ -153,7 +153,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
-    }
+    } 
 
   });
 };
@@ -204,4 +204,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the current URL path
+  const path = window.location.pathname;
+
+  // Extract the project identifier (e.g., "project-2")
+  const projectMatch = path.match(/project-(\d+)/);
+
+  // If the URL contains "project-X", redirect to "projects/project-X"
+  if (projectMatch) {
+    const projectId = projectMatch[0]; // e.g., "project-2"
+    window.location.href = `./projects/${projectId}`;
+  }
 });
