@@ -80,7 +80,7 @@
   /* font-size */
   --fs-1: 24px;
   --fs-2: 18px;
-  --fs-3: 17px;
+  --fs-3: 16.5px;
   --fs-4: 16px;
   --fs-5: 15px;
   --fs-6: 14px;
@@ -339,7 +339,6 @@ main {
 
 .info-content .name {
   color: var(--white-2);
-  font-size: var(--fs-3);
   font-weight: var(--fw-500);
   letter-spacing: -0.25px;
   margin-bottom: 10px;
@@ -430,22 +429,37 @@ main {
 
 .contact-info address { font-style: normal; }
 
-.social-list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 15px;
-  padding-bottom: 4px;
-  padding-left: 7px;
-}
+
 
 .social-item .social-link {
   color: var(--light-gray-70);
   font-size: 18px;
 }
 
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 4px;
+}
 
-.social-item .social-link:hover { color: var( --turquoise); }
+/* Default hover effect */
+.social-item .social-link:hover { color: var(--turquoise); }
+
+/* Brand-specific hover colors */
+.social-link.facebook:hover { color: #3b89ef; }
+.social-link.twitter:hover, .social-link.x:hover { color: #1DA1F2; }
+.social-link.instagram:hover { color: #E4405F; }
+.social-link.linkedin:hover { color: #014f9e; }
+.social-link.github:hover { color: #171515; }
+.social-link.youtube:hover { color: #FF0000; }
+.social-link.whatsapp:hover { color: #25D366; }
+.social-link.telegram:hover { color: #0088cc; }
+.social-link.discord:hover { color: #5865F2; }
+.social-link.pinterest:hover { color: #E60023; }
+.social-link.snapchat:hover { color: #FFFC00; }
+.social-link.tiktok:hover { color: #000000; }
 
 
 
@@ -503,6 +517,8 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  text-align: justify;
+
 }
 
 .about-text p { margin-bottom: 15px; }
@@ -554,6 +570,8 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
+  text-align: justify;
+
 }
 
 
@@ -830,6 +848,7 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  text-align: justify;
 }
 
 
@@ -1883,6 +1902,59 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/* See More/Less Button Styles */
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.see-more-btn {
+  background: none;
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-400);
+  padding: 8px 16px;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition-1);
+  position: relative;
+}
+
+.see-more-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: var(--dodger-blue);
+  opacity: 0;
+  transition: var(--transition-1);
+}
+
+.see-more-btn:hover {
+  color: var(--dodger-blue);
+}
+
+.see-more-btn:hover::after {
+  opacity: 1;
+}
+
+.hidden-item {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .see-more-btn {
+    font-size: 15px;
+    font-weight: var(--fw-500);
+  }
+}
+
 .libutton {
   display: block; /* Ensure it behaves like a block element */
   margin: 0 auto; /* Center the button horizontally */

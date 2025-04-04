@@ -156,4 +156,52 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
-}
+};
+
+// See More/Less functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize all timeline sections to show only 3 items
+  const sections = document.querySelectorAll('.timeline');
+  
+  sections.forEach(section => {
+    const items = section.querySelectorAll('.timeline-item');
+    
+    // Only add the see more button if there are more than 3 items
+    if (items.length > 3) {
+      // Hide items beyond the first 3
+      for (let i = 3; i < items.length; i++) {
+        items[i].classList.add('hidden-item');
+      }
+      
+      // Create and add the "See More" button
+      const seeMoreContainer = document.createElement('div');
+      seeMoreContainer.className = 'see-more-container';
+      
+      const seeMoreBtn = document.createElement('button');
+      seeMoreBtn.className = 'see-more-btn';
+      seeMoreBtn.textContent = 'See More';
+      
+      seeMoreContainer.appendChild(seeMoreBtn);
+      section.appendChild(seeMoreContainer);
+      
+      // Add click event listener to the button
+      seeMoreBtn.addEventListener('click', function() {
+        const hiddenItems = section.querySelectorAll('.hidden-item');
+        
+        if (seeMoreBtn.textContent === 'See More') {
+          // Show all items
+          hiddenItems.forEach(item => {
+            item.classList.remove('hidden-item');
+          });
+          seeMoreBtn.textContent = 'See Less';
+        } else {
+          // Hide items beyond the first 3
+          for (let i = 3; i < items.length; i++) {
+            items[i].classList.add('hidden-item');
+          }
+          seeMoreBtn.textContent = 'See More';
+        }
+      });
+    }
+  });
+});
