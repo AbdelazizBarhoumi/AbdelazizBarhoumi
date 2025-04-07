@@ -197,39 +197,42 @@
   </script>
   <script>
     document.getElementById("translateButton").addEventListener("click", async () => {
-      const blogContent = document.querySelectorAll("#blogContent p:not(:first-child)"); // Skip the first <p> tag (English version)
+      const blogContent = document.querySelectorAll("#blogContent p:not(:first-child)");
       let textToTranslate = "";
 
-      // Combine the text from all <p> tags
       blogContent.forEach((p) => {
         textToTranslate += p.innerText + "\n";
       });
 
       try {
-        // Construct the Google Translate API URL
-        const apiUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=ar&tl=en&dt=t&q=${encodeURIComponent(
-          textToTranslate
-        )}`;
+        const apiUrl = "https://libretranslate.com/translate";
+        const response = await fetch(apiUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            q: textToTranslate,
+            source: "ar",
+            target: "en",
+            format: "text",
+          }),
+        });
 
-        const response = await fetch(apiUrl);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
-
-        // Extract the translated text
-        const translatedText = data[0].map((item) => item[0]).join("");
+        const translatedText = data.translatedText;
         const translatedParagraphs = translatedText.split("\n");
 
-        // Update each <p> tag with the translated text
         blogContent.forEach((p, index) => {
           if (translatedParagraphs[index]) {
             p.innerText = translatedParagraphs[index].trim();
           }
         });
 
-        // Update the button text and direction
         document.getElementById("translateButton").innerText = "Translate to Arabic";
         document.getElementById("blogContent").dir = "ltr";
       } catch (error) {
