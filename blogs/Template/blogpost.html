@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdelaziz Barhoumi Blog</title>
+  <link rel="stylesheet" href="../blogstyle.css" />
+</head>
+
+<body>
+  <header class="blog-header">
+    <div class="container">
+      <h1 class="site-title">Abdelaziz Barhoumi Blog</h1>
+      <p class="site-subtitle">Your daily dose of innovation and insight</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // JSON-formatted, potentially read from a database
+    var article = {
+      title: {
+        en_US: "",
+        fr_FR: "",
+        ar_AR: "",
+      },
+      content: {
+        en_US: `
+
+
+       `,
+        fr_FR: `
+        
+        `,
+        ar_AR: `
+        
+        `,
+      },
+    };
+
+    // Function to dynamically set the content and direction based on language
+    function setLanguage(lang) {
+      const contentElement = document.getElementById("blogContent");
+      const titleElement = document.getElementById("postTitle");
+
+      // Update content and title
+      titleElement.innerHTML = article.title[lang];
+      contentElement.innerHTML = article.content[lang];
+
+      // Set text direction based on language
+      if (lang === "ar_AR") {
+        document.body.setAttribute("dir", "rtl");
+        document.body.style.textAlign = "right";
+      } else {
+        document.body.setAttribute("dir", "ltr");
+        document.body.style.textAlign = "left";
+      }
+
+      // Recalculate reading time after setting content
+      calculateReadingTime();
+    }
+
+    // Function to calculate and display reading time
+    function calculateReadingTime() {
+      const wordsPerMinute = 200;
+      const blogText = document.getElementById("blogContent").innerText || "";
+      const wordCount = blogText.trim().split(/\s+/).length;
+      const readingTime = Math.ceil(wordCount / wordsPerMinute);
+      document.getElementById("readingTime").innerText = `| Reading time: ${readingTime} min read`;
+    }
+
+
+    // Initialize the page
+    document.addEventListener("DOMContentLoaded", () => {
+      setLanguage("ar_AR"); // Set default language to Arabic
+    });
+  </script>
+
+  <main class="container">
+    <article class="blog-post">
+      <div class="blog-banner">
+        <img src="img/Does artificial intelligence lie Blog banner.jpeg?technology,ai" alt="Blog Banner" />
+      </div>
+
+      <!-- Language Selector -->
+      <div class="language-selector-container">
+        <div class="language-selector">
+          <button class="lang-btn" onclick="setLanguage('en_US')">English</button>
+          <button class="lang-btn" onclick="setLanguage('fr_FR')">Français</button>
+          <button class="lang-btn" onclick="setLanguage('ar_AR')">العربية</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Title -->
+      <h2 id="postTitle" class="post-title"></h2>
+
+      <!-- Post Meta Information -->
+      <div class="post-meta">
+        <img src="../../assets/images/my-avatar.png" alt="Author" class="author-img" />
+        <span class="author-name">By Abdelaziz Barhoumi</span>
+        <span class="reading-time" id="readingTime">| Reading time: ...</span>
+        <span class="post-date" id="postDate">| Nov 23, 2023</span>
+      </div>
+
+      <!-- Dynamic Content -->
+      <div id="blogContent" class="post-content"></div>
+      <div class="back-button-container">
+        <button class="back-button" onclick="goBackToBlog()">← Back to Blog</button>
+      </div>
+      <section class="related-articles">
+        <h3>People who read this also read:</h3>
+        <div class="related-articles-grid">
+          <a href="../How AI Is Shaping the Future/blogpost">
+            <div class="related-snap">
+              <img src="../How AI Is Shaping the Future/img/How AI Is Shaping the Future.jpeg" alt="Blog 1 Thumbnail" />
+              <div class="related-snap-content">
+                <h4 class="related-snap-title">
+                  How AI Is Shaping the Future
+                </h4>
+                <div class="related-snap-meta">
+                  <img src="../../assets/images/my-avatar.png" alt="Author" />
+                  <span>By Abdelaziz Barhoumi</span>
+                  <span>•</span>
+                  <span>March 30, 2025</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="related-snap">
+              <img src="img/Top 10 Cybersecurity Trends.jpeg" alt="Blog 2 Thumbnail" />
+              <div class="related-snap-content">
+                <h4 class="related-snap-title">
+                  Top 10 Cybersecurity Trends
+                </h4>
+                <div class="related-snap-meta">
+                  <img src="../../assets/images/avatar-4.png" alt="Author" />
+                  <span>By Omar Kamel</span>
+                  <span>•</span>
+                  <span>April 1, 2025</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="related-snap">
+              <img src="img/Mastering JavaScript in 2025.jpeg" alt="Blog 3 Thumbnail" />
+              <div class="related-snap-content">
+                <h4 class="related-snap-title">
+                  Mastering JavaScript in 2025
+                </h4>
+                <div class="related-snap-meta">
+                  <img src="../../assets/images/avatar-2.png " alt="Author" />
+                  <span>By Laila Farouk</span>
+                  <span>•</span>
+                  <span>April 5, 2025</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="blog-footer">
+    <p>&copy; 2025 Abdelaziz Barhoumi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function goBackToBlog() {
+      window.location.href = "../../index.html#blog";
+    }
+  </script>
+
+</body>
+
+</html>

@@ -182,6 +182,28 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 };
 
+// Function to activate the correct page based on the hash
+const activatePageFromHash = function () {
+  const hash = window.location.hash.substring(1); // Get the hash without the '#'
+  const targetPage = hash || "about"; // Default to "about" if no hash is present
+
+  for (let i = 0; i < pages.length; i++) {
+    if (pages[i].dataset.page === targetPage) {
+      pages[i].classList.add("active");
+      navigationLinks[i].classList.add("active");
+    } else {
+      pages[i].classList.remove("active");
+      navigationLinks[i].classList.remove("active");
+    }
+  }
+};
+
+// Activate the correct page on page load
+window.addEventListener("DOMContentLoaded", activatePageFromHash);
+
+// Activate the correct page when the hash changes
+window.addEventListener("hashchange", activatePageFromHash);
+
 // See More/Less functionality
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize all timeline sections to show only 3 items

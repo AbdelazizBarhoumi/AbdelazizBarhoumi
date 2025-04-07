@@ -294,20 +294,22 @@
 
       <!-- Dynamic Content -->
       <div id="blogContent" class="post-content"></div>
-
+      <div class="back-button-container">
+        <button class="back-button" onclick="goBackToBlog()">← Back to Blog</button>
+      </div>
       <section class="related-articles">
         <h3>People who read this also read:</h3>
         <div class="related-articles-grid">
-          <a href="../Does artificial intelligence lieBlog/blogpost">
+          <a href="../Does artificial intelligence lie/blogpost">
             <div class="related-snap">
-              <img src="../Does artificial intelligence lieBlog/img/Does artificial intelligence lie Blog thumb.png" alt="Blog 1 Thumbnail" />
+              <img src="../Does artificial intelligence lie/img/Does artificial intelligence lie Blog thumb.png" alt="Blog 1 Thumbnail" />
               <div class="related-snap-content">
                 <h4 class="related-snap-title">
                   Does artificial intelligence lie?
                 </h4>
                 <div class="related-snap-meta">
                   <img src="../../assets/images/avatar-3.png" alt="Author" />
-                  <span>By مجتمع الأمن المعلوماتي</span>
+                  <span>By Abdelaziz Barhoumi</span>
                   <span>•</span>
                   <span>APR 03, 2025</span>
                 </div>
@@ -354,7 +356,11 @@
   <footer class="blog-footer">
     <p>&copy; 2025 Abdelaziz Barhoumi. All rights reserved.</p>
   </footer>
-
+  <script>
+    function goBackToBlog() {
+      window.location.href = "../../index.html#blog";
+    }
+  </script>
 </body>
 
 </html>
