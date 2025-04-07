@@ -338,16 +338,9 @@ Considérez-vous ces modèles comme des outils neutres ou des partenaires de dé
       document.getElementById("readingTime").innerText = `| Reading time: ${readingTime} min read`;
     }
 
-    // Function to dynamically set today's date
-    function setPostDate() {
-      const today = new Date();
-      const options = { year: "numeric", month: "long", day: "numeric" };
-      document.getElementById("postDate").innerText = `| ${today.toLocaleDateString("en-US", options)}`;
-    }
 
     // Initialize the page
     document.addEventListener("DOMContentLoaded", () => {
-      setPostDate(); // Set the post date
       setLanguage("ar_AR"); // Set default language to Arabic
     });
   </script>
@@ -375,7 +368,7 @@ Considérez-vous ces modèles comme des outils neutres ou des partenaires de dé
         <img src="../../assets/images/my-avatar.png" alt="Author" class="author-img" />
         <span class="author-name">By مجتمع الأمن المعلوماتي</span>
         <span class="reading-time" id="readingTime">| Reading time: ...</span>
-        <span class="post-date" id="postDate"></span>
+        <span class="post-date" id="postDate">| APR 03, 2025</span>
       </div>
 
       <!-- Dynamic Content -->
@@ -384,16 +377,16 @@ Considérez-vous ces modèles comme des outils neutres ou des partenaires de dé
       <section class="related-articles">
         <h3>People who read this also read:</h3>
         <div class="related-articles-grid">
-          <a href="#">
+          <a href="../How AI Is Shaping the Future/blogpost">
             <div class="related-snap">
-              <img src="img/How AI Is Shaping the Future.jpeg" alt="Blog 1 Thumbnail" />
+              <img src="../How AI Is Shaping the Future/img/How AI Is Shaping the Future.jpeg" alt="Blog 1 Thumbnail" />
               <div class="related-snap-content">
                 <h4 class="related-snap-title">
                   How AI Is Shaping the Future
                 </h4>
                 <div class="related-snap-meta">
-                  <img src="../../assets/images/avatar-3.png" alt="Author" />
-                  <span>By Sarah Lee</span>
+                  <img src="../../assets/images/my-avatar.png" alt="Author" />
+                  <span>By Abdelaziz Barhoumi</span>
                   <span>•</span>
                   <span>March 30, 2025</span>
                 </div>

@@ -163,7 +163,7 @@ body {
   }
   
   .related-snap-meta {
-    font-size: 0.85rem;
+    font-size: 0.70rem;
     color: #aaa;
     display: flex;
     gap: 0.5rem;
@@ -296,7 +296,7 @@ body {
   }
 
   .related-snap-meta {
-    font-size: 0.8rem; /* Adjust meta font size */
+    font-size: 0.7rem; /* Adjust meta font size */
   }
 }
 
