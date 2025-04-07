@@ -68,12 +68,31 @@ body {
   }
   
   .post-meta {
+    direction: ltr; /* Force left-to-right direction */
+    text-align: left; /* Align text to the left */
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 0.9rem;
-    color: #aaaaaa;
-    margin-bottom: 1.5rem;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .post-meta img.author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .post-meta .author-name {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .post-meta .reading-time,
+  .post-meta .post-date {
+    margin-left: 10px;
+    color: #777;
   }
   
   .author-img {
@@ -95,6 +114,8 @@ body {
     margin-top: 2rem;
     padding-top: 1rem;
     border-top: 1px solid #444;
+    direction: ltr; /* Force left-to-right direction */
+    text-align: left; /* Align text to the left */
   }
   
   .related-articles h3 {
@@ -107,6 +128,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
+    direction: ltr; /* Ensure the grid layout remains left-to-right */
   }
   
   .related-snap {
@@ -173,3 +195,182 @@ body {
     font-size: 0.9rem;
     transition: background-color 0.3s ease;
   }
+  .language-selector-container {
+    text-align: center; /* Center the buttons */
+    direction: ltr; /* Keep the direction left-to-right regardless of page direction */
+    margin-bottom: 20px; /* Add spacing below the buttons */
+  }
+
+  /* Language Selector Buttons */
+  .lang-btn {
+    background-color: #007bff; /* Primary blue color */
+    color: #fff; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding for better appearance */
+    margin: 0 5px; /* Add spacing between buttons */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  }
+
+  /* Hover Effect for Buttons */
+  .lang-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+  }
+
+  /* Active Button Style */
+  .lang-btn.active {
+    background-color: #28a745; /* Green color for active button */
+    color: #fff; /* White text */
+  }
+
+/* Responsive Design */
+
+/* General Container Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .blog-header {
+    padding: 1.5rem 0; /* Adjust header padding */
+  }
+
+  .site-title {
+    font-size: 2rem; /* Reduce title font size */
+  }
+
+  .site-subtitle {
+    font-size: 1rem; /* Reduce subtitle font size */
+  }
+}
+
+/* Blog Banner */
+@media (max-width: 768px) {
+  .blog-banner img {
+    border-radius: 12px; /* Slightly smaller border radius */
+  }
+}
+
+/* Blog Post */
+@media (max-width: 768px) {
+  .blog-post {
+    padding: 1.5rem; /* Reduce padding for smaller screens */
+  }
+
+  .post-title {
+    font-size: 1.8rem; /* Adjust title font size */
+  }
+
+  .post-meta {
+    flex-direction: column; /* Stack meta information vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .post-meta img.author-img {
+    margin-bottom: 10px; /* Add spacing below the avatar */
+  }
+
+  .post-meta .author-name,
+  .post-meta .reading-time,
+  .post-meta .post-date {
+    margin-left: 0; /* Remove left margin */
+  }
+}
+
+/* Related Articles */
+@media (max-width: 768px) {
+  .related-articles-grid {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    gap: 1rem; /* Adjust gap between articles */
+  }
+
+  .related-snap img {
+    height: 120px; /* Adjust thumbnail height */
+  }
+
+  .related-snap-title {
+    font-size: 1rem; /* Adjust title font size */
+  }
+
+  .related-snap-meta {
+    font-size: 0.8rem; /* Adjust meta font size */
+  }
+}
+
+/* Related Articles - Responsive Design */
+@media (max-width: 768px) {
+  .related-articles-grid {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    gap: 1rem; /* Adjust gap between articles */
+  }
+
+  .related-snap {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align content for smaller screens */
+  }
+
+  .related-snap img {
+    height: auto; /* Allow images to scale naturally */
+    max-width: 100%; /* Ensure images don't overflow */
+    margin-bottom: 10px; /* Add spacing below images */
+  }
+
+  .related-snap-content {
+    padding: 0.5rem; /* Reduce padding for smaller screens */
+  }
+
+  .related-snap-title {
+    font-size: 1rem; /* Adjust title font size */
+    margin-bottom: 0.5rem; /* Add spacing below the title */
+  }
+
+  .related-snap-meta {
+    font-size: 0.85rem; /* Adjust meta font size */
+    flex-direction: column; /* Stack meta information vertically */
+    align-items: center; /* Center-align meta information */
+    gap: 0.3rem; /* Add spacing between meta items */
+  }
+
+  .related-snap-meta img {
+    margin-bottom: 5px; /* Add spacing below the avatar */
+  }
+}
+
+/* Related Articles - Responsive Design */
+@media (max-width: 768px) {
+  .related-snap-meta {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange items in a row */
+    align-items: center; /* Vertically align items */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 0.5rem; /* Add spacing between items */
+    text-align: left; /* Ensure text is aligned to the left */
+  }
+
+  .related-snap-meta img {
+    margin-bottom: 0; /* Remove bottom margin for the avatar */
+  }
+}
+
+/* Language Selector */
+@media (max-width: 768px) {
+  .language-selector-container {
+    margin-bottom: 15px; /* Adjust spacing below buttons */
+  }
+
+  .lang-btn {
+    padding: 8px 15px; /* Adjust button padding */
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+  .blog-footer {
+    font-size: 0.8rem; /* Adjust footer font size */
+    padding: 1rem 0; /* Adjust footer padding */
+  }
+}
