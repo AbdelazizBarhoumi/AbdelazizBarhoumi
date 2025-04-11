@@ -24,7 +24,7 @@
 
 ---
 
-### 🏆 GitHub Trophies <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Trophy.png" alt="Trophy" width="30" height="30" />
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Trophy.png" alt="Trophy" width="30" height="30" /> GitHub Trophies 
 
 <div align="center" style="background-color:#f9f9f9; padding: 20px; border-radius: 10px;">
   <img src="https://github-trophies.vercel.app/?username=AbdelazizBarhoumi&rank=SECRET,SSS,SS,S,AAA,AA&row=2&column=9&theme=radical" alt="GitHub Trophies" style="border-radius: 10px;"/>
@@ -34,15 +34,16 @@
 <div align="center"><img src="https://komarev.com/ghpvc/?username=AbdelazizBarhoumi&label=Profile%20Views&color=0e75b6&style=flat-square" /></div> 
 
 ---
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" alt="Technologist" width="30" height="30" /> Currently Working On 
 
-🔭 Currently Working On <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" alt="Technologist" width="30" height="30" />
+### 
 <div style="background-color:#fef9e7; padding: 15px; border-left: 5px solid #FFC300;">
 - Developing Job Board Platform for job postings and applications
 </div>
 
 ---
 
-### 📈 My Coding Progress <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Bar%20Chart.png" alt="Bar Chart" width="30" height="30" />
+### 📈 My Coding Progress 
 
 <div align="center" style="background-color:#f5f5f5; padding: 20px; border-radius: 10px;">
 
@@ -66,10 +67,9 @@
 </div>
 
 ---
-
-🌱 Currently Learning <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Person%20Fencing.png" alt="Person Fencing" width="30" height="30" />
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Person%20Fencing.png" alt="Technologist" width="30" height="30" /> Currently Learning  
 <div style="background-color:#e8f4f8; padding: 15px; border-left: 5px solid #0078D7;">
-- Laravel for backend development
+- Laravel for backend development <br>
 - Angular for building dynamic frontends
 </div>
 
@@ -97,7 +97,7 @@
 <table>
   <tr>
     <td>
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQEAKk2wcGXo3g/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1688629234342?e=1747267200&v=beta&t=xN-gfAx7Rfa6T-fLwDmH9IypQSMLgNdyBdUK5l1b-60" width="300px" alt="Hackfest Photo"/>
+      <img src="https://media.licdn.com/dms/image/v2/D4D2DAQEO4-elw2NMpQ/profile-treasury-image-shrink_800_800/B4DZXlGNYaG4AY-/0/1743305367484?e=1745010000&v=beta&t=6vkPQakyDw34VmaYnth3sK8ByBitQMIsYqwjAz6bWPU" width="300px" alt="Hackfest Photo"/>
     </td>
     <td>
       <ol>
