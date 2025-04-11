@@ -150,10 +150,10 @@
   <a href="https://github.com/AbdelazizBarhoumi" target="_blank">
     <img src="https://img.shields.io/badge/-GitHub-black?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
-  <a href="https://leetcode.com/Shyam027" target="_blank">
+  <a href="https://leetcode.com/u/AbdelazizBarhoumi/" target="_blank">
     <img src="https://img.shields.io/badge/-LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode">
   </a>
-  <a href="https://auth.geeksforgeeks.org/user/shyamrajwyx0" target="_blank">
+  <a href="https://www.geeksforgeeks.org/user/abdulazeemp8r/" target="_blank">
     <img src="https://img.shields.io/badge/-GeeksforGeeks-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white" alt="GeeksforGeeks">
   </a>
 </div>
