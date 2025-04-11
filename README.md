@@ -35,14 +35,9 @@
 
 ---
 
-### 🔭 Currently Working On <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" alt="Technologist" width="30" height="30" />
-
+🔭 Currently Working On <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" alt="Technologist" width="30" height="30" />
 <div style="background-color:#fef9e7; padding: 15px; border-left: 5px solid #FFC300;">
-
-- Developing **IoT-based Smart Systems** integrating hardware and software  
-- Enhancing **AI models** for real-world applications  
-- Exploring **data management** and **automation tools**  
-
+Developing Job Board Platform for job postings and applications
 </div>
 
 ---
@@ -72,14 +67,10 @@
 
 ---
 
-### 🌱 Currently Learning <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Person%20Fencing.png" alt="Person Fencing" width="30" height="30" /> :
-
+🌱 Currently Learning <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Person%20Fencing.png" alt="Person Fencing" width="30" height="30" />
 <div style="background-color:#e8f4f8; padding: 15px; border-left: 5px solid #0078D7;">
-
-- Advanced **Machine Learning** techniques  
-- **IoT Communication Protocols** like MQTT  
-- **System Design** and scalable architectures  
-
+Laravel for backend development
+Angular for building dynamic frontends
 </div>
 
 ---
