@@ -183,10 +183,6 @@
 
 ---
 
-# This schedules the file for deletion before Windows fully loads
-reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager" /v PendingFileRenameOperations /t REG_MULTI_SZ /d "\\??\C:\Program Files\usbip\usbipd.exe" /f
-
-
 
 
 
