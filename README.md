@@ -42,31 +42,6 @@
 </div>
 
 ---
-
-### 📈 My Coding Progress 
-
-<div align="center" style="background-color:#f5f5f5; padding: 20px; border-radius: 10px;">
-
-<table>
-  <tr>
-    <td align="center" style="padding: 10px;">
-    <b>LeetCode</b><br><br>
-    <a href="https://leetcode.com/u/AbdelazizBarhoumi/" target="_blank" rel="noopener noreferrer">
-      <img src="https://leetcard.jacoblin.cool/AbdelazizBarhoumi?ext=heatmap&theme=unicorn" alt="Abdelaziz's LeetCode Card" style="border-radius: 10px;"/>
-    </a>
-    </td>
-    <td align="center" style="padding: 10px;">
-      <b>GeeksforGeeks</b><br><br>
-      <a href="https://auth.geeksforgeeks.org/user/abdulazeemp8r/practice/">
-        <img src="https://geeks-for-geeks-stats-card.vercel.app/?username=abdulazeemp8r&theme=dark" style="border-radius: 10px;"/>
-      </a>
-    </td>
-  </tr>
-</table>
-
-</div>
-
----
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Person%20Fencing.png" alt="Technologist" width="30" height="30" /> Currently Learning  
 <div style="background-color:#e8f4f8; padding: 15px; border-left: 5px solid #0078D7;">
 - Laravel for backend development <br>
