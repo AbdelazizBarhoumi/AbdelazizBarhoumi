@@ -50,15 +50,6 @@
 
 ---
 
-### 📊 Github & Development Stats <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" alt="Bar Chart" width="25" height="25" />
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AbdelazizBarhoumi&show_icons=true&hide=issues&hide_border=true&title_color=FF5733&text_color=c9d1d9&icon_color=79c0ff&bg_color=0d1117" height="180px"/>
-  &nbsp;&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AbdelazizBarhoumi&layout=compact&langs_count=10&hide_border=true&title_color=FF5733&text_color=c9d1d9&bg_color=0d1117" height="180px"/>
-</p>
-
----
 
 ### 👯 Looking to Collaborate On <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" alt="Handshake" width="25" height="25" /> :
 
