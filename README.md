@@ -23,7 +23,20 @@
 </div>
 
 ---
-![Snake animation](https://raw.githubusercontent.com/AbdelazizBarhoumi/AbdelazizBarhoumi/main/github-contribution-grid-snake.svg?v=TIMESTAMP)  
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/AbdelazizBarhoumi/AbdelazizBarhoumi/main/github-contribution-grid-snake-dark.svg"
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/AbdelazizBarhoumi/AbdelazizBarhoumi/main/github-contribution-grid-snake.svg"
+  />
+  <img
+    alt="GitHub contribution snake animation"
+    src="https://raw.githubusercontent.com/AbdelazizBarhoumi/AbdelazizBarhoumi/main/github-contribution-grid-snake.svg"
+  />
+</picture>
 ---
 
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Trophy.png" alt="Trophy" width="30" height="30" /> GitHub Trophies 
