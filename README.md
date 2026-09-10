@@ -23,7 +23,7 @@
 </div>
 
 ---
-![Snake animation](https://github.com/AbdelazizBarhoumi/AbdelazizBarhoumi/blob/main/github-contribution-grid-snake.svg)
+![Snake animation](https://raw.githubusercontent.com/AbdelazizBarhoumi/AbdelazizBarhoumi/main/github-contribution-grid-snake.svg)
 ---
 
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Trophy.png" alt="Trophy" width="30" height="30" /> GitHub Trophies 
