@@ -16,9 +16,26 @@
 
 - 💻 Software engineering student passionate about **web development** & **AI-driven projects**  
 - 🧠 Into system design, problem-solving & leadership  
-- 🧩 Built innovative projects like **Smart Trash Bin** & **Job Board Platform**  
+- 🧩 Building and shipping full-stack products across **AI**, **SaaS**, and **travel-tech**  
 - 🏆 Led teams, organized events, and built systems to streamline operations  
 - 🚀 Always learning, building, and leveling up  
+
+</div>
+
+---
+
+### 🚀 Featured Projects & Repositories
+
+<div style="background-color:#f5f5f5; padding: 15px; border-left: 5px solid #8E44AD;">
+
+- [**belAzurTravel**](https://github.com/AbdelazizBarhoumi/belAzurTravel) — Laravel travel platform repository  
+- [**BACOVET**](https://github.com/AbdelazizBarhoumi/BACOVET) — Full-stack Laravel application (active development)  
+- [**iot_reap**](https://github.com/AbdelazizBarhoumi/iot_reap) — Laravel-based product with modern frontend tooling  
+- [**cert-generator**](https://github.com/AbdelazizBarhoumi/cert-generator) — Bulk certificate and ID card generation tool  
+- [**InternNexus**](https://github.com/AbdelazizBarhoumi/InternNexus) — Internship listing and placement management system  
+- [**climate**](https://github.com/AbdelazizBarhoumi/climate) — Tour management platform with weather integration  
+- [**bilingual-with-AI**](https://github.com/AbdelazizBarhoumi/bilingual-with-AI) — AI-powered bilingual business evaluation app  
+- [**bookshop**](https://github.com/AbdelazizBarhoumi/bookshop) — Desktop POS system for bookshops (React + Electron)  
 
 </div>
 
@@ -53,7 +70,7 @@
 
 ### 
 <div style="background-color:#fef9e7; padding: 15px; border-left: 5px solid #FFC300;">
-- Developing Job Board Platform for job postings and applications
+- Scaling and polishing multiple Laravel products (travel, internship, and AI tools)
 </div>
 
 ---
@@ -163,7 +180,6 @@
 </div>
 
 ---
-
 
 
 
